@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Police College - Selected Students</title>
+    <link rel="stylesheet" href="web5x.css">
+</head>
+<body>
+<banner class="hh">
+<header>
+    <div class="header-content">
+        <img src="j3.jpg" alt="Logo 1" class="logo-image">
+        <h1 class="site-title">Police College</h1>
+        <img src="j2.jpg" alt="Logo 2" class="logo-image">
+    </div>
+</header>
+
+<nav>
+    <ul class="nav-links">
+        <li><a href="web4.html">Home</a></li>
+        <li><a href="web5x4.html">About us</a></li>
+        <li><a href="web5x6.html">Contact</a></li>
+        <li class="dropdown">
+            <a href="#services">classes ▼</a>
+            <ul class="dropdown-menu">
+                <li><a href="web5.html">ICT</a></li>
+                <li><a href="web5x1.html">PPS</a></li>
+                <li><a href="web5x2.html">LANGUAGES</a></li>
+                <li><a href="web5x3.html">LLB</a></li>
+            </ul>
+        </li>
+        <li><button type="submit"><a href="web4.html">SingnUp</a></button></li>
+    </ul>
+    <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</nav>
+</banner>
+
+<div class="ict2">
+    <div class="container">
+        <h2>Selected Students by their duty</h2>
+
+        <!-- Group 1 Section -->
+        <section>
+            <h3> DUTY ON CID </h3>
+            <ul class="student-list" id="group1-student-list"></ul>
+        </section>
+
+        <!-- Group 2 Section -->
+        <section>
+            <h3>DUTY ON Main Gety</h3>
+            <ul class="student-list" id="group2-student-list"></ul>
+        </section>
+
+        <!-- Group 3 Section -->
+        <section>
+            <h3>DUTY ON WING1</h3>
+            <ul class="student-list" id="group3-student-list"></ul>
+        </section>
+
+        <!-- Group 4 Section -->
+        <section>
+            <h3>DUTY ON WING2</h3>
+            <ul class="student-list" id="group4-student-list"></ul>
+        </section>
+
+        <button onclick="window.location.href='web5.html'" class="submit-btn">Go Back</button>
+        <button onclick="clearAllSelections()" class="clear-btn">Reset All</button>
+    </div>
+</div>
+
+<script>
+    // Function to retrieve and display selected students for each group
+    function displaySelectedStudents() {
+        const groups = ["Group1", "Group2", "Group3", "Group4"];
+        
+        groups.forEach(group => {
+            const selectedStudents = JSON.parse(localStorage.getItem(`${group}_students`)) || [];
+            const studentList = document.getElementById(`${group.toLowerCase()}-student-list`);
+
+            selectedStudents.forEach(student => {
+                const listItem = document.createElement("li");
+                listItem.className = "student-item";
+                listItem.innerText = student;
+                studentList.appendChild(listItem);
+            });
+        });
+    }
+
+    // Function to clear all selections
+    function clearAllSelections() {
+        ["Group1_students", "Group2_students", "Group3_students", "Group4_students"].forEach(group => {
+            localStorage.removeItem(group);
+        });
+        window.location.href = 'web5x.html';  // Reload to show empty selections
+    }
+
+    // Display selected students on page load
+    window.onload = displaySelectedStudents;
+</script>
+</body>
+</html>

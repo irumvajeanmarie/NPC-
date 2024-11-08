@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Police College - Student Selection</title>
+    <link rel="stylesheet" href="web5.css">
+</head>
+<body>
+<banner class="hh">
+<header>
+    <div class="header-content">
+        <img src="j3.jpg" alt="Logo 1" class="logo-image">
+        <h1 class="site-title">Police College</h1>
+        <img src="j2.jpg" alt="Logo 2" class="logo-image">
+    </div>
+</header>
+
+<nav>
+    <ul class="nav-links">
+        <li><a href="web4.html">Home</a></li>
+        <li><a href="web5x4.html">About us</a></li>
+        <li><a href="web5x6.html">Contact</a></li>
+        <li><a href="web5x.html">ON_Duty</a></li>
+        <li><button type="submit"><a href="web4.html">SingnUp</a></button></li>
+    </ul>
+    <div class="menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</nav>
+</banner>
+<div class="ict1">
+    <div class="container">
+        <h2>Select Students from LLB</h2>
+
+        <!-- Select All Option -->
+        <div class="select-all">
+            <input type="checkbox" id="select-all" onclick="toggleSelectAll()">
+            <label for="select-all">Select All Students</label>
+        </div>
+
+        <!-- Student List -->
+        <ul class="student-list" id="student-list">
+            <!-- Student items will be generated here via JavaScript -->
+        </ul>
+
+        <!-- Submit Buttons for Different Groups -->
+        <div class="button-group">
+            <div><button type="button" class="submit-btn" onclick="handleGroupSubmit('Group1')">duty on cid</button></div>
+            <div><button type="button" class="submit-btn" onclick="handleGroupSubmit('Group2')">duty on main gety</button></div>
+            <div><button type="button" class="submit-btn" onclick="handleGroupSubmit('Group3')">duty on wing1</button></div>
+            <div><button type="button" class="submit-btn" onclick="handleGroupSubmit('Group4')">duty on wing2</button></div>
+        </div>
+    </div>
+</div>
+
+<script src="web5.js"></script>
+</body>
+</html>

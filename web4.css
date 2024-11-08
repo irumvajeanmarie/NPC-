@@ -1,0 +1,443 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding-top: 170px;
+}
+.hh{
+    position: fixed;
+    width: 100%;
+    top:0px;
+    left: 0px;
+    right: 0px;
+    z-index: 3;
+}
+
+/* Header Styling */
+header {
+    background-color:rgba(0,0,0,0.6); /* Header background color */
+    color: #fff;
+    padding: 2px 0px 1px;
+    text-align:auto;
+    height: 98px;
+    background: url(night-sky.gif);
+    background-size: cover;
+}
+
+.header-content {
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    padding-top: 30px;
+    height: 60px;
+    margin-top:0px ;
+    padding-left: 0px;
+   
+    
+}
+
+.logo-image {
+    width: 150px;
+    height: 95px;
+    margin: 3px 20px;
+    padding-top: 0px;
+    border: 4px solid white;
+    border-radius: 37px;
+}
+
+.site-title {
+    font-size: 28px;
+    color: #fff;
+    padding-left: 220px;
+    padding-right: 70px;
+}
+
+/* Navbar Styling */
+nav {
+    background-color: rgb(63, 63, 203); /* Navbar background color */
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 4px solid white;
+    border-radius: 37px;
+    background: url(ft.jpeg); 
+    background-size: cover;
+    
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    font-size: 20px;
+}
+
+.nav-links li {
+    margin: 0 15px;
+    position: relative;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff6347;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #444;
+    padding: 10px 0;
+    list-style: none;
+    min-width: 150px;
+    border-radius: 4px;
+}
+
+.dropdown-menu li {
+    margin: 0;
+    text-align: left;
+}
+
+.dropdown-menu a {
+    padding: 10px 20px;
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    background-color: #555;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Content Sections Styling */
+.content-section {
+    padding: 40px 20px;
+    text-align: center;
+}
+.mdv{
+    display: flex;
+    justify-content: space-between; /* Space between divs */
+    gap: 20px; /* Optional spacing between divs */
+    padding: 20px 0px 20px;
+    
+
+}
+
+#section1 {
+    flex: 1; /* Makes each box take up equal space */
+    padding-left:0px;
+    padding-right:1px;
+    background-color:white;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 420px;
+    overflow-y: scroll;
+    overflow-x: scroll;
+    padding-top: 0px;
+}
+.sn{
+    height: 200px;
+    width:200px;
+    margin-top: 0px;
+}
+/* Image Slider Container */
+.image-slider {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    margin:auto;
+    overflow: hidden;
+
+}
+
+/* Styling Each Slide */
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    opacity: 0; /* Initially hidden */
+    animation: fade 16s infinite; /* Animation duration */
+}
+
+/* Fade Animation */
+@keyframes fade {
+    0%, 25% {
+        opacity: 1; /* Visible during these keyframes */
+    }
+    30%, 100% {
+        opacity: 0; /* Hidden for the rest */
+    }
+}
+
+/* Applying Delay for Each Slide */
+.slide:nth-child(1) {
+    animation-delay: 0s;
+}
+.slide:nth-child(2) {
+    animation-delay: 4s;
+}
+.slide:nth-child(3) {
+    animation-delay: 8s;
+}
+.slide:nth-child(4) {
+    animation-delay: 12s;
+}
+
+/* Image Styling */
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+#section2 {
+    flex: 4; /* Makes each box take up equal space */
+    padding-left:2px;
+    padding-right:1px;
+    background-color: #f2f2f2;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 420px;
+    margin-top: 0px;
+    padding-top: 0px;
+    overflow-y: scroll;
+}
+h2{
+    color: blue;
+    font-size: 25px;
+}
+.cent{
+    display: flex;
+    justify-content: space-between; /* Space between divs */
+    gap: 20px; /* Optional spacing between divs */
+    padding: 20px 0px 20px;
+    
+}
+.centb{
+    display: flex;
+    justify-content: space-between; /* Space between divs */
+    gap: 20px; /* Optional spacing between divs */
+    padding: 20px 0px 20px;
+    margin-top: 60px;
+
+}
+.centb a{
+    text-decoration: none;
+}
+
+#section3 {
+    flex: 1; /* Makes each box take up equal space */
+    padding-left:1px;
+    padding-right:0px;
+    background-color: #f2f2f2;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    height: 420px;
+    margin-top: 0px;
+    padding-top: 0px;
+    background: url(oc1.jpeg);
+    background-size:cover;
+}
+.vid{
+    height: 400px;
+    background-color: #ccc;
+    justify-content: space-between; 
+    gap: 30px;
+    border: 20px solid #ccc;
+    border-radius: 24px;
+    height: 220px;
+    background:url(skyg.gif);
+    background-size:cover;
+}
+.vid1{
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+/* Footer Styling */
+/* Footer Styling */
+.footer {
+    background-color: #333; /* Footer background color */
+    color: #fff; /* Text color */
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    background: url(ft.jpeg); 
+    background-size: cover;
+    height: 220px;
+    margin-top: 195px;
+    margin-left: 0;
+    
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px; /* Ensures sections stay visible on small screens */
+    padding: 20px;
+}
+
+.footer-section h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #ff6347;
+}
+
+.footer-section p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+    color: #ff6347;
+}
+
+/* Social Icons */
+.social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    color: #fff;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #ff6347;
+}
+
+/* Newsletter Form */
+.footer-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-section input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.footer-section button {
+    padding: 10px;
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.footer-section button:hover {
+    background-color: #ff4500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        text-align: center;
+        min-width: 100%;
+    }
+}
+
+
+/* Menu Toggle (for mobile) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    background: #fff;
+    height: 3px;
+    width: 25px;
+    margin: 4px;
+    border-radius: 2px;
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    nav {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        display: none;
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin: 15px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .dropdown-menu {
+        position: static;
+        display: none;
+    }
+
+    .dropdown.active .dropdown-menu {
+        display: flex;
+        flex-direction: column;
+    }
+}
